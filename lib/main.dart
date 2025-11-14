@@ -18,6 +18,7 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.red[600],
     ),
     body: Row(
+      mainAxisAlignment:MainAxisAlignment.center,
       children: <Widget>[
         Text('Hello, word'),
         TextButton(
