@@ -1,7 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 void main() => runApp(MaterialApp(
   home:Home(),
@@ -13,29 +10,47 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context){
     return  Scaffold(
     appBar:AppBar(
-      title: Text('my first app test'),
+      title: Text('my first app '),
       centerTitle: true,
       backgroundColor: Colors.red[600],
     ),
-    body: Row(
-      mainAxisAlignment:MainAxisAlignment.center,
+    body: Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
-        Text('Hello, word'),
-        TextButton(
-          onPressed: (){},
-          style: TextButton.styleFrom(
-            backgroundColor: Colors.amber,
-          ),
-          child: Text('click me'),
+        Row(
+          children: <Widget>[
+            Text('hello'),
+            Text('world'),
+          ]
         ),
         Container(
-          color:Colors.cyan,
-          padding: EdgeInsets.all(30.0),
-          child: Text('inside container'),
+          padding: EdgeInsets.all(20.0),
+          color: Colors.cyan,
+          child: Text(
+            'one',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
-
+        Container(
+          padding: EdgeInsets.all(30.0),
+          color: Colors.amber,
+          child: Text(
+            'two',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.all(40.0),
+          color: Colors.pinkAccent,
+          child: Text(
+            'three',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
       ],
     ),
+    
     floatingActionButton: FloatingActionButton(
       onPressed: () {  },
       child: Text('click'),
